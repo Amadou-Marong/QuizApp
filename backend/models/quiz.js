@@ -13,6 +13,18 @@ const quizSchema = new mongoose.Schema(
         ref: "Question", // Reference the Question model
       },
     ],
+    thumbnail: {
+      type: String,
+      required: true,
+    },
+    // createdAt: {
+    //   type: Date,
+    //   default: Date.now,
+    // },
+    // updatedAt: {
+    //   type: Date,
+    //   default: Date.now,
+    // },
   },
   {
     timestamps: true,
