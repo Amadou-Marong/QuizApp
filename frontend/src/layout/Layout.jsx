@@ -14,7 +14,7 @@ const toggleSidebar = () => {
         <Outlet />
       </main> */}
       <div className={`transition-all duration-300 ${sidebarExpanded ? 'ml-72' : 'ml-24'}`}>
-        <main className="p-4 w-full">
+        <main className="p-4 w-full relative">
           <Outlet />
         </main>
       </div>

@@ -24,11 +24,12 @@ const UpdateQuiz = () => {
     setQuestions(updatedQuestions);
   };
 
-
+  console.log(sidebarExpanded);
+  
 
   return (
     <div className="p-8">
-            <Link to="/manage-quizzes" className="text-gray-500 absolute top-2 left-20 left-60">
+            <Link to="/manage-quizzes" className={`text-gray-500 absolute top-4 left-6`}>
               <ArrowLeft />
             </Link>
             <h1 className="text-2xl font-bold mb-6">Update Quiz</h1>
