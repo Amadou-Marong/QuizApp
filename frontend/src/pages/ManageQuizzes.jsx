@@ -4,6 +4,7 @@ import axios from "axios";
 import { Edit, Trash } from "lucide-react";
 import { useEffect, useState } from "react";
 import ConfirmModal from "../components/ConfirmModal";
+import { Link } from "react-router-dom";
 
 const ManageQuizzes = () => {
 
@@ -61,7 +62,11 @@ const ManageQuizzes = () => {
                             <td className="px-6 py-4 whitespace-nowrap">{quiz.title}</td>
                             <td className="px-6 py-4 whitespace-nowrap">{quiz.questions.length}</td>
                             <td className="px-6 py-4 whitespace-nowrap">
-                                <button className="text-blue-500 hover:text-blue-700 mr-2 cursor-pointer" onClick={() => {handleUpdateQuiz}}><Edit size={20}/></button>
+                                <Link to={`${quiz._id}`}>
+                                    <button className="text-blue-500 hover:text-blue-700 mr-2 cursor-pointer" onClick={() => {handleUpdateQuiz}}>
+                                        <Edit size={20}/>
+                                    </button>                               
+                                </Link>
                                 <button className="text-red-500 hover:text-red-700 cursor-pointer" onClick={() => {handleDeleteQuiz(quiz._id)}}><Trash size={20}/></button>
                             </td>
                         </tr>
@@ -69,7 +74,7 @@ const ManageQuizzes = () => {
                 </tbody>
             </table>
         </div>
-        {modalOpen && <ConfirmModal setOpenModal={setModalOpen} selectedQuizId={selectedQuizId} />}
+        {modalOpen && <ConfirmModal quizzes={quizzes} setQuizzes={setQuizzes} setOpenModal={setModalOpen} selectedQuizId={selectedQuizId} />}
     </div>
   )
 }

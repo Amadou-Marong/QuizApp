@@ -18,6 +18,8 @@ const SideBar = ({ isExpanded, toggleSidebar }) => {
     { icon: BadgePlus, label: "Add Quiz", path: "/add-quiz" },
     // manage quizzes page
     { icon: ShieldQuestion, label: "Manage Quizzes", path: "/manage-quizzes" },
+    // // update a quiz
+    // {icon: Download, label: "Update Quiz", path: "/quizzes/:id/edit"}
 
   ];
 

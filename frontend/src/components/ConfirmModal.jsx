@@ -1,15 +1,16 @@
 import axios from "axios";
 
-const ConfirmModal = ({ setOpenModal, selectedQuizId }) => {
+const ConfirmModal = ({ setOpenModal, selectedQuizId, setQuizzes, quizzes }) => {
   const BASE_URL = "http://localhost:5000/api";
 
   const handleConfirmDelete = async () => {
     try {
-      await axios.delete(`${BASE_URL}/quizzes/${selectedQuizId}`);
-      
-      
-      
-      setOpenModal(false)
+        await axios.delete(`${BASE_URL}/quizzes/${selectedQuizId}`);
+        
+        const filteredQuizzes = quizzes.filter((quiz) => quiz._id !== selectedQuizId);
+
+        setQuizzes(filteredQuizzes)
+        setOpenModal(false)
     } catch (error) {
       console.log(error);
     }
@@ -20,7 +21,7 @@ const ConfirmModal = ({ setOpenModal, selectedQuizId }) => {
   }
 
   return (
-    <div className="fixed inset-0 bg-gray-200 bg-opacity-50 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-gray-200 bg-opacity-10 flex items-center justify-center z-50">
       <div className="bg-white p-8 w-1/3 rounded-lg min-w-[400px]">
         <h2 className="text-2xl font-semibold text-gray-800">
           Are you sure you want to delete this Quiz?
