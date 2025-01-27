@@ -8,16 +8,24 @@ import AddQuiz from "./pages/AddQuiz";
 import ManageQuizzes from "./pages/ManageQuizzes";
 import UpdateQuiz from "./pages/UpdateQuiz";
 import { useState } from "react";
+import LoginPage from "./pages/auth/LoginPage";
+import RegisterPage from "./pages/auth/RegisterPage";
 // import SideBar from "./components/SideBar";
+
 
 function App() {
   const [sidebarExpanded, setSidebarExpanded] = useState(true);
 
-
+  
 
   return (
     <Router>
       <Routes>
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+
         <Route path="/" element={<Layout sidebarExpanded={sidebarExpanded} setSidebarExpanded={setSidebarExpanded}/>}>
           <Route index element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
