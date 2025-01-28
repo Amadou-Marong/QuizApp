@@ -1,10 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AddQuiz = () => {
     const [title, setTitle] = useState("");
     const [questions, setQuestions] = useState([{ questionText: "", options: ["", "", "", ""], correctAnswer: 0 }]);
-
+    const navigate = useNavigate();
     // const BASE_URL = "http://localhost:5000/api";
     const BASE_URL = "https://quizapp-7zaq.onrender.com/api";
 
@@ -29,6 +30,7 @@ const AddQuiz = () => {
         try {
             const response = await axios.post(`${BASE_URL}/quizzes`, { title, questions });
             console.log("Quiz added:", response.data);
+            navigate("/manage-quizzes");
         } catch (error) {
             console.error("Error adding quiz:", error);
         }
