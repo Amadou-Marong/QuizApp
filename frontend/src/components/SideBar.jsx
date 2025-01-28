@@ -11,7 +11,7 @@ const SideBar = ({ isExpanded, toggleSidebar }) => {
   const menuItems = [
     { icon: Home, label: "Home", path: "/" },
     // about page
-    { icon: Info, label: "About", path: "/about" },
+    // { icon: Info, label: "About", path: "/about" },
     // quiz page
     { icon: CircleHelp, label: "Quizzes", path: "/quizzes" },   
     // add quiz page
