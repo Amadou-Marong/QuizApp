@@ -9,7 +9,8 @@ const SingleQuiz = () => {
     const [score, setScore] = useState(null);
     const [error, setError] = useState(null);
 
-    const BASE_URL = "http://localhost:5000/api";
+    // const BASE_URL = "http://localhost:5000/api";
+    const BASE_URL = "https://quizapp-7zaq.onrender.com/api";
 
     useEffect(() => {
         const fetchQuiz = async () => {

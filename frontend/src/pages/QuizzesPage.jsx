@@ -8,7 +8,8 @@ const QuizzesPage = () => {
     const [quizzes, setQuizzes] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const BASE_URL = 'http://localhost:5000/api';
+    // const BASE_URL = 'http://localhost:5000/api';
+    const BASE_URL = 'https://quizapp-7zaq.onrender.com/api';
     useEffect(() => {
         const fetchQuizzes = async () => {
             setLoading(true);

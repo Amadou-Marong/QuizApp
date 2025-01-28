@@ -13,7 +13,8 @@ const ManageQuizzes = () => {
     const [modalOpen, setModalOpen] = useState(false)
     const [selectedQuizId, setSelectedQuizId] = useState(null);
 
-    const BASE_URL = 'http://localhost:5000/api';
+    // const BASE_URL = 'http://localhost:5000/api';
+    const BASE_URL = 'https://quizapp-7zaq.onrender.com/api';
     useEffect(() => {
         
         const fetchQuizzes = async () => {
