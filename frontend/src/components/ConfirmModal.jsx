@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const ConfirmModal = ({ setOpenModal, selectedQuizId, setQuizzes, quizzes }) => {
-  const BASE_URL = "http://localhost:5000/api";
+  // const BASE_URL = "http://localhost:5000/api";
+  const BASE_URL = "https://quizapp-7zaq.onrender.com/api";
 
   const handleConfirmDelete = async () => {
     try {
