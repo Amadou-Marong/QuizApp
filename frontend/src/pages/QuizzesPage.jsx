@@ -9,7 +9,9 @@ const QuizzesPage = () => {
     const [loading, setLoading] = useState(false);
 
     // const BASE_URL = 'http://localhost:5000/api';
-    const BASE_URL = 'https://quizapp-7zaq.onrender.com/api';
+    // const BASE_URL = 'https://quizapp-7zaq.onrender.com/api';
+    const BASE_URL = import.meta.env.VITE_API_BASE_URL; // Automatically picks the right one
+    console.log(BASE_URL);
     useEffect(() => {
         const fetchQuizzes = async () => {
             setLoading(true);

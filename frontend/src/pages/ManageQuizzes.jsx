@@ -14,7 +14,11 @@ const ManageQuizzes = () => {
     const [selectedQuizId, setSelectedQuizId] = useState(null);
 
     // const BASE_URL = 'http://localhost:5000/api';
-    const BASE_URL = 'https://quizapp-7zaq.onrender.com/api';
+    // const BASE_URL = 'https://quizapp-7zaq.onrender.com/api';
+
+    const BASE_URL = import.meta.env.VITE_API_BASE_URL; // Automatically picks the right one
+
+    
     useEffect(() => {
         
         const fetchQuizzes = async () => {

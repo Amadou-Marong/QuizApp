@@ -13,12 +13,14 @@ app.use(express.json());
 app.use(cors());
 
 // Serve static files from the 'public' directory
-app.use("/public", express.static("public"));
+// app.use("/public", express.static("public"));
+app.use(express.static('./public'))
 
 connectDB();
 app.listen(PORT, () => {
     try {
         console.log(`Server is running on port http://localhost:${PORT}`);
+
     } catch (error) {
         console.error(`Error: ${error.message}`);
     }

@@ -7,7 +7,9 @@ const UpdateQuiz = () => {
   const [questions, setQuestions] = useState([{ questionText: "", options: ["", "", "", ""], correctAnswer: 0 }]);
   
 //   const BASE_URL = "http://localhost:5000/api";
-  const BASE_URL = "https://quizapp-7zaq.onrender.com/api";
+//   const BASE_URL = "https://quizapp-7zaq.onrender.com/api";
+
+const BASE_URL = import.meta.env.VITE_API_BASE_URL; // Automatically picks the right one
 
   const handleAddQuestion = () => {
     setQuestions([...questions, { questionText: "", options: ["", "", "", ""], correctAnswer: 0 }]);

@@ -16,7 +16,7 @@ const quizSchema = new mongoose.Schema(
     thumbnail: {
       type: String,
       required: false,
-      default: "http://localhost:5000/public/quiztime.jpg",
+      default: "http://localhost:5000/images/quiztime.jpg" 
     },
     // createdAt: {
     //   type: Date,
