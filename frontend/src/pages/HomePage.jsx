@@ -1,5 +1,5 @@
 import { useState } from "react";
-import image from "../assets/quiztime.jpg"
+import image from "../assets/image.webp"
 import { BadgePlus, CircleHelp, Home, MenuIcon, XIcon } from "lucide-react"
 import { Link } from "react-router-dom";
 
