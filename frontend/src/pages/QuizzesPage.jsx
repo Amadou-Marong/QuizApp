@@ -1,5 +1,5 @@
 import axios from "axios";
-import { use, useEffect } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import QuizCard from "../components/QuizCard";
@@ -10,7 +10,7 @@ const QuizzesPage = () => {
 
     // const BASE_URL = 'http://localhost:5000/api';
     // const BASE_URL = 'https://quizapp-7zaq.onrender.com/api';
-    const BASE_URL = import.meta.env.VITE_API_BASE_URL; // Automatically picks the right one
+    const BASE_URL = import.meta.env.VITE_API_BASE_URL ||  "http://localhost:5000/api"; // Automatically picks the right one
     console.log(BASE_URL);
     useEffect(() => {
         const fetchQuizzes = async () => {
