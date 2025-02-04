@@ -22,7 +22,8 @@ app.listen(PORT, () => {
         console.log(`Server is running on port http://localhost:${PORT}`);
 
     } catch (error) {
-        console.error(`Error: ${error.message}`);
+        // console.error(`Error: ${error.message}`);
+        process.exit(1); // Exit process with failure
     }
 });
 
